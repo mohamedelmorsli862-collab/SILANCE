@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نقابات مملكة سايلنس 💎</title>
+<style>
+:root{
+    --diamond1:#00f2fe;
+    --diamond2:#8e2de2;
+    --dark:#020617;
+}
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,var(--dark),#0f172a 40%,#001f2f);
+    color:white;
+    overflow-x:hidden;
+}
+
+.nav-container{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(15px);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.nav-container div{
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    padding: 80px 5%;
+}
+
+.card {
+    position: relative;
+    height: 320px;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.5s;
+    background: #111;
+    box-shadow: 0 0 20px rgba(0,242,254,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    text-align: center;
+}
+
+.card-content h3 {
+    margin:0;
+    font-size: 18px;
+    color: var(--diamond1);
+}
+
+.card-content p {
+    margin:5px 0 0;
+    font-size: 14px;
+    color: var(--diamond2);
+}
+
+.card .icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 28px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px var(--diamond1), 0 0 80px var(--diamond2);
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    .cards{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+}
+ .back {
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 30px;
+            border: 1px solid #00f2fe;
+            color: #00f2fe;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            background: rgba(0, 242, 254, 0.05);
+            backdrop-filter: blur(5px);
+        }
+         .back:hover {
+            background: #00f2fe;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+        }
+
+</style>
+</head>
+<body>
+
+<nav class="nav-container">
+    <div>SILANCE ❄️</div>
+</nav>
+
+<h1 style="text-align:center; margin-top:80px; color: var(--diamond2);">نقابات مملكة سايلنس 💎</h1>
+
+<div class="cards">
+    <!-- Card 1 -->
+    <div class="card">
+        <span class="icon">🪽</span>
+        <img src="./irin.jfif" alt="الـديـا">
+        <div class="card-content">
+            <h3>الـديـا</h3>
+            <p>ادمرال: ايـࢪيـن🩸</p>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <span class="icon">🌕</span>
+        <img src="./yami.jfif" alt="مـون">
+        <div class="card-content">
+            <h3>مـون</h3>
+            <p>ادمرال: يـامـي ⛩️</p>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <span class="icon">🍃</span>
+        <img src="./jan.jfif" alt="اثـيـنا">
+        <div class="card-content">
+            <h3>اثـيـنا</h3>
+            <p>ادمرال: جـان 🌸</p>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <span class="icon">🦁</span>
+        <img src="./milyodas.jfif" alt="كـاࢪيـون">
+        <div class="card-content">
+            <h3>كـاࢪيـون</h3>
+            <p>ادمرال: ميـلـيودس 🤺</p>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+        <span class="icon">🌙</span>
+        <img src="./kilwa.jfif" alt="طـوكيـو">
+        <div class="card-content">
+            <h3>طـوكيـو</h3>
+            <p>ادمرال: كيــ⚡ــلوا</p>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+        <span class="icon">🍁</span>
+        <img src="./maw.jfif" alt="ࢪايـفـࢪ">
+        <div class="card-content">
+            <h3>ࢪايـفـࢪ</h3>
+            <p>ادمرال: مـاومـاو ☀</p>
+        </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+        <span class="icon">👑</span>
+        <img src="./chisa.jfif" alt="رويـال">
+        <div class="card-content">
+            <h3>رويـال</h3>
+            <p>ادمرال: شـيسـا 🕷</p>
+        </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+        <span class="icon">⚖️</span>
+        <img src="./chado.jfif" alt="فونتين">
+        <div class="card-content">
+            <h3>فونتين</h3>
+            <p>ادمرال: شادو🪾</p>
+        </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+        <span class="icon">🪶</span>
+        <img src="./kaniki.jfif" alt="هيروكو">
+        <div class="card-content">
+            <h3>هيروكو</h3>
+            <p>ادمرال: كانيكي ⚖️</p>
+        </div>
+    </div>
+</div>
+<div style="text-align: center; width: 100%; margin-top: 40px;">
+            <a href="index.html" class="back">⬅ الرجوع للمملكة</a>
+        </div>
+
+</body>
+</html>
