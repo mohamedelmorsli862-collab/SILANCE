@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مملكة سايلنس </title>
+</head>
+<body>
+    <style>
+        .nav-container {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(2, 6, 23, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+        }
+
+        .epic-menu {
+            display: flex;
+            gap: 15px;
+        }
+
+        .menu-item {
+            padding: 8px 18px;
+            color: var(--primary);
+            text-decoration: none;
+            border: 1px solid var(--primary);
+            font-size: 13px;
+            font-weight: bold;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 0 15px var(--primary);
+        }
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('./9al3a.jpeg') center/cover;
+            background-attachment: fixed;
+        }
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            text-shadow: 0 0 30px var(--primary);
+        }
+        @media (max-width: 768px) {
+
+  .nav-container {
+    padding-bottom: 80px; /* باش ما يتغطاش بالمنيو */
+  }
+
+  .epic-menu {
+    position: fixed;
+    bottom: 15px;
+    left: 5%;
+    width: 90%;
+    background: rgba(15, 23, 42, 0.98);
+    border-radius: 22px;
+    padding: 12px;
+
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+
+    box-shadow: 0 0 25px rgba(0,242,254,0.25);
+  }
+
+  .menu-item {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 6px;
+    white-space: nowrap;
+
+    border-radius: 12px;
+    clip-path: none; /* مهم */
+  }
+}
+:root{
+  --diamond1:#00f2fe;
+  --diamond2:#8e2de2;
+  --dark:#020617;
+}
+
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,var(--dark),#0f172a 40%,#001f2f);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ===== DEFINIR ===== */
+
+.section-definir{
+  padding:100px 10%;
+  text-align:center;
+}
+
+.section-definir .dua-btn{
+  display:inline-block;
+  padding:15px 35px;
+  border-radius:50px;
+  background:linear-gradient(90deg,var(--diamond1),var(--diamond2));
+  font-weight:bold;
+  margin-bottom:40px;
+  box-shadow:0 0 25px rgba(0,242,254,.6);
+  transition:.4s;
+}
+
+.section-definir .dua-btn:hover{
+  transform:scale(1.08);
+}
+
+/* ===== ROTAB ===== */
+
+.section-rotab{
+  padding:100px 5%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:40px;
+}
+
+.rotab-card{
+  position:relative;
+  height:380px;
+  border-radius:30px;
+  overflow:hidden;
+  transition:.5s;
+}
+
+.rotab-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.6s;
+}
+
+.rotab-card::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60%;
+  background:linear-gradient(to top,rgba(0,0,0,.9),transparent);
+}
+
+.rotab-card h3{
+  position:absolute;
+  bottom:50px;
+  left:20px;
+  z-index:2;
+}
+
+.rotab-card p{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  color:var(--diamond1);
+  font-weight:bold;
+  z-index:2;
+}
+
+.rotab-card:hover{
+  transform:scale(1.07);
+}
+
+.rotab-card:hover img{
+  transform:scale(1.15);
+}
+
+/* ===== A9ALIM ===== */
+
+.section-a9alim{
+  padding:100px 5%;
+  text-align:center;
+}
+
+.section-a9alim h1{
+  margin-bottom:40px;
+}
+
+.i9lim-card{
+  position:relative;
+  width:350px;
+  height:450px;
+  margin:auto;
+  border-radius:30px;
+  overflow:hidden;
+  transition:.5s;
+}
+
+.i9lim-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.i9lim-card::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60%;
+  background:linear-gradient(to top,rgba(0,0,0,.9),transparent);
+}
+
+.i9lim-card h1{
+  position:absolute;
+  bottom:60px;
+  left:20px;
+  z-index:2;
+}
+
+.i9lim-card h3{
+  position:absolute;
+  bottom:30px;
+  left:20px;
+  color:var(--diamond1);
+  z-index:2;
+}
+
+.i9lim-card:hover{
+  transform:scale(1.05);
+}
+
+/* ===== DO9 ===== */
+
+.section-do9{
+  padding:80px 5%;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.do9-card{
+  position:relative;
+  width:260px;
+  height:360px;
+  border-radius:25px;
+  overflow:hidden;
+  transition:.4s;
+}
+
+.do9-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.do9-card::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:50%;
+  background:linear-gradient(to top,rgba(0,0,0,.9),transparent);
+}
+
+.do9-card h1{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  z-index:2;
+}
+
+.do9-card:hover{
+  transform:scale(1.07);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+  margin-top:100px;
+  background:#020617;
+  padding:50px 20px;
+  text-align:center;
+  border-top:1px solid rgba(0,242,254,.3);
+}
+/* ===== I9ALIM FIX FINAL ===== */
+
+.section-a9alim{
+  padding:100px 5%;
+  text-align:center;
+}
+
+.i9lim-title{
+  margin-bottom:50px;
+}
+
+.i9lim-card{
+  width:350px;
+  height:460px;
+  margin:auto;
+  border-radius:30px;
+  overflow:hidden;
+  position:relative;
+  transition:.5s;
+}
+
+.i9lim-card a{
+  display:block;
+  width:100%;
+  height:100%;
+  position:relative;
+  color:white;
+  text-decoration:none;
+}
+
+.i9lim-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.i9lim-overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:30px;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.4),
+    transparent
+  );
+  backdrop-filter: blur(2px);
+}
+
+.i9lim-overlay h2{
+  margin:0 0 8px 0;
+}
+
+.i9lim-overlay p{
+  margin:0;
+  color:#00f2fe;
+  font-weight:bold;
+}
+
+.i9lim-card:hover{
+  transform:scale(1.05);
+}
+/* ===== DO9 FIX FINAL ===== */
+
+.section-do9{
+  padding:100px 5%;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.do9-card{
+  width:260px;
+  height:360px;
+  border-radius:25px;
+  overflow:hidden;
+  position:relative;
+  transition:.4s;
+}
+
+.do9-card a{
+  display:block;
+  width:100%;
+  height:100%;
+  position:relative;
+  text-decoration:none;
+  color:white;
+}
+
+.do9-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.do9-overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:20px;
+  background:linear-gradient(to top,rgba(0,0,0,.9),transparent);
+}
+
+.do9-overlay h2{
+  margin:0;
+  font-size:18px;
+}
+
+.do9-card:hover{
+  transform:scale(1.07);
+}
+/* ===== DO9 ROYAL SLIDER ===== */
+
+.section-do9{
+  padding:100px 5%;
+  display:flex;
+  gap:30px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+}
+
+.section-do9::-webkit-scrollbar{
+  display:none;
+}
+
+.do9-card{
+  min-width:260px;
+  height:360px;
+  border-radius:25px;
+  overflow:hidden;
+  position:relative;
+  flex-shrink:0;
+  scroll-snap-align:center;
+  transition:.4s;
+}
+
+.do9-card:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 30px #00f2fe,
+             0 0 60px #8e2de2;
+}
+/* ===== I9ALIM ANIMATION ===== */
+
+.i9lim-card{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s ease;
+}
+
+.i9lim-card.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.i9lim-card:hover{
+  box-shadow:0 0 40px #00f2fe,
+             0 0 80px #8e2de2;
+}
+.developer-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            /* يمكنك تغييرها إلى right إذا أردت */
+            background: rgba(15, 23, 42, 0.6);
+            /* زجاجي داكن */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            padding: 8px 15px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .developer-badge:hover {
+            transform: translateY(-5px) scale(1.05);
+            border-color: #00f2fe;
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.2);
+            background: rgba(15, 23, 42, 0.9);
+        }
+
+        .developer-badge .text {
+            font-family: 'Cinzel', serif;
+            /* أو أي خط تفضله */
+            font-size: 11px;
+            color: #fff;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+        }
+
+        .developer-badge .code-icon {
+            color: #00f2fe;
+            font-weight: 900;
+            font-family: monospace;
+            font-size: 14px;
+            animation: blink 2s infinite;
+        }
+:root{
+    --diamond1:#00f2fe;
+    --diamond2:#8e2de2;
+    --nav-bg: rgba(2,6,23,0.85);
+}
+
+.nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,242,254,0.3);
+    box-shadow: 0 0 25px rgba(0,242,254,0.15);
+}
+
+/* Logo glow */
+.nav-container .logo {
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--diamond1);
+    text-shadow:
+        0 0 5px var(--diamond1),
+        0 0 10px var(--diamond2),
+        0 0 15px var(--diamond1),
+        0 0 25px var(--diamond2);
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    font-size: 26px;
+    color: var(--diamond1);
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--diamond1),0 0 10px var(--diamond2);
+}
+
+/* Epic menu links */
+.epic-menu {
+    display: flex;
+    gap: 15px;
+}
+.menu-item {
+    position: relative;
+    padding: 8px 18px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+/* Diamond gradient hover */
+.menu-item::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:12px;
+    background: linear-gradient(45deg,var(--diamond1),var(--diamond2),var(--diamond1));
+    opacity:0;
+    z-index:-1;
+    transition:0.4s;
+}
+.menu-item:hover::before {
+    opacity:1;
+    filter:blur(8px);
+}
+.menu-item:hover {
+    color:#fff;
+    transform: translateY(-3px) scale(1.05);
+    text-shadow: 0 0 6px var(--diamond1),0 0 12px var(--diamond2),0 0 18px var(--diamond1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px){
+    .epic-menu {
+        position: fixed;
+        bottom: 15px;
+        left: 5%;
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-around;
+        background: rgba(15,23,42,0.95);
+        padding:12px;
+        border-radius:22px;
+        display:none; /* hidden by default */
+        box-shadow:0 0 25px rgba(0,242,254,0.25);
+    }
+
+    .epic-menu.active {
+        display:flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu-item {
+        flex:1;
+        text-align:center;
+        font-size:12px;
+        padding:8px 6px;
+    }
+}
+/* ===== MOBILE HORIZONTAL MENU ===== */
+@media (max-width: 768px){
+    .hamburger {
+        display: block;
+        margin-left: 0;
+        align-self: flex-end;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 5%;
+    }
+
+    .epic-menu {
+        position: relative;  /* not fixed */
+        bottom: auto;
+        left: 0;
+        width: 100%;
+        display: none;       /* hidden by default */
+        flex-direction: row; /* horizontal */
+        justify-content: flex-start; /* start from left */
+        gap: 8px;            /* small gap between buttons */
+        margin-top: 10px;    /* space under logo */
+        padding: 0;          /* keep buttons small */
+        background: transparent; /* no bg behind buttons */
+        box-shadow: none;
+    }
+
+    .epic-menu.active {
+        display: flex;
+    }
+
+    .menu-item {
+        flex: none;
+        font-size: 12px;     /* smaller buttons */
+        padding: 6px 12px;   /* small padding */
+        border-radius: 12px;
+        clip-path: none;
+        background: linear-gradient(45deg, var(--diamond1), var(--diamond2));
+        color: #fff;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .menu-item:hover {
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 0 10px var(--diamond1), 0 0 20px var(--diamond2);
+    }
+}
+    </style>
+    <nav class="nav-container">
+    <div class="logo">SILANCE ❄️</div>
+    <div class="hamburger">&#9776;</div> <!-- Hamburger menu for mobile -->
+    <div class="epic-menu">
+        <a href="#definir" class="menu-item">تعريف</a>
+        <a href="#rotab" class="menu-item">رتب العليا</a>
+        <a href="na9aba.html" class="menu-item">نقابات</a>
+        <a href="#i9lim" class="menu-item">الأقاليم</a>
+        <a href="#do9" class="menu-item">الدوقات</a>
+        <a href="./devloper.html" class="menu-item">المطوّر الأعلى</a>
+    </div>
+</nav>
+    <header class="hero">
+        <h1 style="color: rgb(0, 166, 255);">مملكة سايلنس</h1>
+        <p style="opacity: 0.7; letter-spacing: 2px; color: rgb(0, 166, 255);">welcome to  silance</p>
+    </header>
+    <section id="definir" class="section-definir">
+
+  <div class="dua-btn">
+    اللهم صل على سيدنا محمد وعلى آله وصحبه وسلم 💜🪻
+  </div>
+
+  <p>
+    مملكة سايلنس احد الممالك التي خرجت من تفكك نيفيريا
+    تأسست المملكة بتاريخ 2026/1/16 على يد المؤسس سوبارو
+    وفي فترة قصيرة أصبحت من أقوى الممالك الجديدة...
+  </p>
+
+</section>
+   <section id="rotab" class="section-rotab">
+    <h1 class="i9lim-title"  style="color: #8e2de2; text-align: center;">الرتب العليا</h1>
+        <div class="rotab-card">
+            <img src="./sobaro.jpeg" alt="">
+            <h3>الامبراطور</h3>
+            <p>سوبارو</p>
+        </div>
+        <div class="rotab-card">
+            <img src="./hinri.jpeg" alt="">
+            <h3>النواب</h3>
+            <p>هينري</p>
+        </div>
+        <div class="rotab-card">
+            <img src="./sabo.jpeg" alt="">
+            <h3>النواب</h3>
+            <p>سابو</p>
+        </div>
+       <div class="rotab-card">
+            <img src="./mosachi.jpeg" alt="">
+            <h3>النواب</h3>
+            <p>موساشي</p>
+        </div>
+        <div class="rotab-card">
+            <img src="./toji.jpeg" alt="">
+            <h3>اللورد</h3>
+            <p>توجي</p>
+        </div>
+        <div class="rotab-card">
+            <img src="./gojo.jpeg" alt="">
+            <h3>المستشار</h3>
+            <p>غوجو</p>
+        </div>
+       <div class="rotab-card">
+            <img src="./choto.jpeg" alt="">
+            <h3>نواب اللورد</h3>
+            <p>شوتو </p>
+        </div>
+        <div class="rotab-card">
+            <img src="./lofi.jpeg" alt="">
+            <h3>نواب اللورد</h3>
+            <p>لوفي</p>
+        </div>
+        <div class="rotab-card">
+            <img src="./nir.jpeg" alt="">
+            <h3> الماركيز</h3>
+            <p>نير</p>
+        </div>
+        <div class="rotab-card">
+            <img src="./nanami.jpeg" alt="">
+            <h3>نواب الماركيز </h3>
+            <p>نانامي</p>
+        </div>
+    </section>
+    <section id="i9lim" class="section-a9alim">
+        <h1 class="i9lim-title" style="color: #8e2de2;">الاقليم</h1>
+
+  <h1 class="i9lim-title">
+    اظغط على الاقليم لاستعراض المعلومات
+  </h1>
+
+  <div class="i9lim-card">
+    <a href="./i9lim.html">
+      <img src="itiriya.jpeg" alt="">
+      <div class="i9lim-overlay">
+        <h2>☁ ايثيريا</h2>
+        <p>كونت : دانتي</p>
+      </div>
+    </a>
+  </div>
+
+</section>
+<h1 class="i9lim-title" style="color: #8e2de2; text-align: center;">
+    الدوقات
+</h1>
+    <section id="do9" class="section-do9">
+
+  <div class="do9-card">
+    <a href="./yono.html">
+      <img src="./yono.jpeg" alt="">
+      <div class="do9-overlay">
+        <h2>دوق : يونو</h2>
+      </div>
+    </a>
+  </div>
+
+  <div class="do9-card">
+    <a href="./nagomo.html">
+      <img src="./nagomo.jpeg" alt="">
+      <div class="do9-overlay">
+        <h2>دوق : ناغومو</h2>
+      </div>
+    </a>
+  </div>
+
+  <div class="do9-card">
+    <a href="./rizi.html">
+      <img src="./rizi.jpeg" alt="">
+      <div class="do9-overlay">
+        <h2>دوق : ريزي</h2>
+      </div>
+    </a>
+  </div>
+
+</section>
+<a href="#" class="developer-badge">
+            <span class="text"> 𝑲𝒂𝒊𝒓𝒐 – 𝑻𝒐𝒋𝒊 ⛧</span>
+            <span class="code-icon">&lt;/&gt;</span>
+        </a>
+    <footer>
+  <h2>مملكة سايلنس 💎</h2>
+  <p>القوة • الهيبة • النظام</p>
+  <p>© 2026 جميع الحقوق محفوظة</p>
+</footer>
+    <script>
+
+// انيميشن ظهور الروتاب
+const cards = document.querySelectorAll(".rotab-card");
+
+window.addEventListener("scroll",()=>{
+  cards.forEach(card=>{
+    const top = card.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      card.style.opacity="1";
+      card.style.transform="translateY(0)";
+    }
+  });
+});
+
+
+const i9lim = document.querySelector(".i9lim-card");
+
+window.addEventListener("scroll",()=>{
+  const top = i9lim.getBoundingClientRect().top;
+  if(top < window.innerHeight - 100){
+    i9lim.classList.add("active");
+  }
+});
+
+
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.epic-menu');
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+</script>
+</body>
+</html>
