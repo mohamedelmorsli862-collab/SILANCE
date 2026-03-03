@@ -164,6 +164,7 @@ body{
   bottom:50px;
   left:20px;
   z-index:2;
+  color:var(--diamond1)
 }
 
 .rotab-card p{
@@ -659,17 +660,134 @@ footer{
         box-shadow: 0 0 10px var(--diamond1), 0 0 20px var(--diamond2);
     }
 }
+/* ===== DIAMOND SECTION STYLE ===== */
+
+.section-definir{
+  position:relative;
+  padding:60px 30px;
+  margin:80px auto;
+  max-width:900px;
+  border-radius:30px;
+  background:linear-gradient(145deg,#050816,#0c1022);
+  border:1px solid rgba(0,242,254,0.4);
+  box-shadow:
+    0 0 30px rgba(0,242,254,0.3),
+    0 0 60px rgba(142,45,226,0.2);
+  color:white;
+  text-align:center;
+  transition:0.5s ease;
+  overflow:hidden;
+}
+
+/* تأثير ضوء خفيف دايز */
+.section-definir::before{
+  content:"";
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:linear-gradient(
+    60deg,
+    transparent,
+    rgba(0,242,254,0.15),
+    transparent
+  );
+  transform:rotate(25deg);
+  animation:shine 6s linear infinite;
+}
+
+@keyframes shine{
+  0%{ transform:translateX(-100%) rotate(25deg); }
+  100%{ transform:translateX(100%) rotate(25deg); }
+}
+
+/* Hover effect */
+.section-definir:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:
+    0 0 40px #00f2fe,
+    0 0 80px #8e2de2,
+    0 0 120px rgba(0,242,254,0.4);
+}
+
+/* Dua Button */
+.dua-btn{
+  background:linear-gradient(90deg,#00f2fe,#8e2de2);
+  padding:12px 25px;
+  border-radius:50px;
+  font-weight:bold;
+  display:inline-block;
+  margin-bottom:30px;
+  box-shadow:0 0 20px rgba(0,242,254,0.5);
+  transition:.4s;
+}
+
+.dua-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 40px #00f2fe,
+             0 0 70px #8e2de2;
+}
+
+/* Paragraph style */
+.section-definir p{
+  font-size:18px;
+  line-height:1.9;
+  color:#dbeafe;
+}
+/* ===== DIAMOND TITLE ===== */
+
+.section-definir h2{
+  font-size:38px;
+  margin-bottom:25px;
+  font-weight:900;
+  background:linear-gradient(
+    90deg,
+    #ffffff,
+    #00f2fe,
+    #8e2de2,
+    #ffffff
+  );
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:diamondShine 4s linear infinite;
+  letter-spacing:2px;
+}
+
+/* لمعان متحرك */
+@keyframes diamondShine{
+  0%{background-position:0%}
+  100%{background-position:300%}
+}
+
+/* ===== DIAMOND PARAGRAPH ===== */
+
+.section-definir p{
+  font-size:19px;
+  line-height:2;
+  background:linear-gradient(
+    120deg,
+    #cfffff,
+    #a5f3fc,
+    #c084fc,
+    #e0f7ff
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:500;
+}
     </style>
     <nav class="nav-container">
     <div class="logo">SILANCE ❄️</div>
     <div class="hamburger">&#9776;</div> <!-- Hamburger menu for mobile -->
     <div class="epic-menu">
-        <a href="#definir" class="menu-item">تعريف</a>
-        <a href="#rotab" class="menu-item">رتب العليا</a>
-        <a href="./na9aba.html" class="menu-item">نقابات</a>
-        <a href="#i9lim" class="menu-item">الأقاليم</a>
-        <a href="#do9" class="menu-item">الدوقات</a>
-        <a href="./devloper.html" class="menu-item">المطوّر الأعلى</a>
+        <a href="#definir" class="menu-item" style="color:var(--diamond1)" >تعريف</a>
+        <a href="#rotab" class="menu-item" style="color:var(--diamond1)">رتب العليا</a>
+        <a href="./na9aba.html" class="menu-item" style="color:var(--diamond1)">نقابات</a>
+        <a href="#i9lim" class="menu-item" style="color:var(--diamond1)">الأقاليم</a>
+        <a href="#do9" class="menu-item" style="color:var(--diamond1)">الدوقات</a>
+        <a href="./devloper.html" class="menu-item" style="color:var(--diamond1)">المطوّر الأعلى</a>
     </div>
 </nav>
     <header class="hero">
@@ -690,7 +808,7 @@ footer{
 
 </section>
    <section id="rotab" class="section-rotab">
-    <h1 class="i9lim-title"  style="color: #8e2de2; text-align: center;">الرتب العليا</h1>
+    <h1 class="i9lim-title"  style="color:var(--diamond1)">الرتب العليا</h1>
         <div class="rotab-card">
             <img src="./sobaro.jpeg" alt="">
             <h3>الامبراطور</h3>
@@ -743,9 +861,9 @@ footer{
         </div>
     </section>
     <section id="i9lim" class="section-a9alim">
-        <h1 class="i9lim-title" style="color: #8e2de2;">الاقليم</h1>
+        <h1 class="i9lim-title" style="text-align:center; color:var(--diamond1) ">الاقليم</h1>
 
-  <h1 class="i9lim-title">
+  <h1 class="i9lim-title" style="color:var(--diamond1)">
     اظغط على الاقليم لاستعراض المعلومات
   </h1>
 
@@ -760,7 +878,7 @@ footer{
   </div>
 
 </section>
-<h1 class="i9lim-title" style="color: #8e2de2; text-align: center;">
+<h1 class="i9lim-title" style="color:var(--diamond1); text-align: center;">
     الدوقات
 </h1>
     <section id="do9" class="section-do9">
@@ -769,7 +887,7 @@ footer{
     <a href="./yono.html">
       <img src="./yono.jpeg" alt="">
       <div class="do9-overlay">
-        <h2>دوق : يونو</h2>
+        <h2  style="color:var(--diamond1)">دوق : يونو</h2>
       </div>
     </a>
   </div>
@@ -778,7 +896,7 @@ footer{
     <a href="./nagomo.html">
       <img src="./nagomo.jpeg" alt="">
       <div class="do9-overlay">
-        <h2>دوق : ناغومو</h2>
+        <h2  style="color:var(--diamond1)">دوق : ناغومو</h2>
       </div>
     </a>
   </div>
@@ -787,7 +905,7 @@ footer{
     <a href="./rizi.html">
       <img src="./rizi.jpeg" alt="">
       <div class="do9-overlay">
-        <h2>دوق : ريزي</h2>
+        <h2  style="color:var(--diamond1)">دوق : ريزي</h2>
       </div>
     </a>
   </div>

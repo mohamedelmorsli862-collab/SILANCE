@@ -7,6 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+    :root{
+  --diamond1:#00f2fe;
+  --diamond2:#8e2de2;
+  --dark:#020617;
+}
 *{
     margin:0;
     padding:0;
@@ -299,13 +304,13 @@ body{
 .avatar img{width:100%;height:100%;object-fit:cover;}
 .name{font-size:26px;font-weight:700;color:gold;}
 .icons{margin-top:15px;font-size:20px;color:#eee;line-height:1.7;}
-.king{border-color:gold;box-shadow:0 0 40px rgba(255,215,0,0.6);}
+.king{border-color:rgb(0, 140, 255);box-shadow:0 0 40px rgba(0, 191, 255, 0.6);}
 .king .avatar{border-color:#00ff99; box-shadow:0 0 30px #00ff99;}
 @keyframes fadeUp{to{transform:translateY(0);opacity:1;}}
 
 /* TITLE */
 .title-box{width:100%; text-align:center; margin-bottom:50px;}
-.title-box h1{font-size:46px; color:gold; letter-spacing:3px; text-shadow:0 0 10px gold, 0 0 25px rgba(255,215,0,0.8);}
+.title-box h1{font-size:46px; color:var(--diamond1); letter-spacing:3px; text-shadow:0 0 10px rgb(0, 238, 255), 0 0 25px rgba(0, 157, 255, 0.8);}
 .title-box p{color:#aaa;font-size:18px;letter-spacing:1px;margin-top:8px;}
 .line{width:220px;height:3px;margin:10px auto;background:linear-gradient(90deg, transparent, #00ff99, transparent);box-shadow:0 0 15px #00ff99;}
 
@@ -467,14 +472,187 @@ body{
         .i9lim-title{
   margin-bottom:50px;
 }
+:root {
+  --diamond1: #00f2fe;
+  --diamond2: #8e2de2;
+  --dark: #020617;
+}
+
+/* Background global dyal site */
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, var(--diamond1), var(--diamond2));
+    color: var(--diamond1); /* katba tb9a f diamond color default */
+    overflow-x: hidden;
+}
+
+/* Gradient text style li t9dar tdir f headings w titles */
+.gradient-text {
+    background: linear-gradient(90deg, var(--diamond1), var(--diamond2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* Example: headings */
+h1, h2, h3, p {
+    color: var(--diamond1); /* default color */
+}
+
+/* Nav container */
+.nav-container {
+    background: rgba(0,0,0,0.5); /* shwaya glass effect */
+    backdrop-filter: blur(12px);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,242,254,0.3);
+}
+
+/* Menu items */
+.menu-item {
+    color: var(--diamond1);
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background: rgba(0,242,254,0.15);
+    color: var(--diamond2);
+}
+/* ===== BASE & COLORS ===== */
+:root{
+  --diamond1:#00f2fe;
+  --diamond2:#8e2de2;
+  --dark:#020617;
+}
+
+/* BODY */
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background: linear-gradient(135deg,var(--dark),#0f172a 40%,#001f2f);
+  color: var(--diamond1); /* kol text b diamond color */
+  overflow-x:hidden;
+}
+
+/* NAV */
+.nav-container {
+  position: sticky;
+  top:0;
+  z-index:1000;
+  background: rgba(2,6,23,0.85);
+  backdrop-filter: blur(15px);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid rgba(0,242,254,0.2);
+  box-shadow: 0 0 25px rgba(0,242,254,0.15);
+}
+.nav-container .logo{
+  font-weight:900; font-size:20px;
+  color: var(--diamond1);
+  text-shadow: 0 0 5px var(--diamond1),0 0 10px var(--diamond2);
+}
+.menu-item{
+  padding:8px 18px; border-radius:12px; font-weight:bold; text-decoration:none;
+  color: var(--diamond1);
+  position:relative; transition:0.3s;
+}
+.menu-item::before{
+  content:""; position:absolute; inset:0; border-radius:12px;
+  background: linear-gradient(45deg,var(--diamond1),var(--diamond2),var(--diamond1));
+  opacity:0; z-index:-1; transition:0.4s;
+}
+.menu-item:hover::before{opacity:1; filter:blur(8px);}
+.menu-item:hover{text-shadow:0 0 6px var(--diamond1),0 0 12px var(--diamond2);}
+
+/* HERO / HEADER */
+.hero{
+  height:50vh; display:flex; flex-direction:column;
+  justify-content:center; align-items:center; text-align:center;
+  background: url('صورة_الهيرو.jpg') center/cover fixed;
+}
+.hero h1{font-family:'Cinzel', serif; font-size:clamp(2.5rem,8vw,4.5rem); text-shadow:0 0 30px var(--diamond1);}
+.hero p{opacity:0.7; letter-spacing:2px; color:var(--diamond1);}
+
+/* SECTIONS / CARDS */
+.section{padding:80px 5%; text-align:center;}
+.card{
+  position:relative; border-radius:25px; overflow:hidden;
+  transition:.4s; margin-bottom:40px;
+}
+.card img{width:100%; height:100%; object-fit:cover; display:block;}
+.card::after{
+  content:""; position:absolute; bottom:0; width:100%; height:50%;
+  background:linear-gradient(to top,rgba(0,0,0,.9),transparent);
+}
+.card h2{position:absolute; bottom:20px; left:20px; color:var(--diamond1); margin:0;}
+.card:hover{transform:scale(1.05); box-shadow:0 0 30px var(--diamond1),0 0 60px var(--diamond2);}
+
+/* FOOTER */
+footer{
+  padding:50px 20px; text-align:center;
+  background: var(--dark); border-top:1px solid rgba(0,242,254,0.2);
+  color: var(--diamond1);
+}
+
+/* DEVELOPER BADGE */
+.developer-badge{
+  position: fixed; bottom:20px; left:20px;
+  background: rgba(15,23,42,0.6); backdrop-filter: blur(10px);
+  border:1px solid rgba(0,242,254,0.2); padding:8px 15px; border-radius:12px;
+  display:flex; align-items:center; gap:10px; cursor:pointer; z-index:9999;
+}
+.developer-badge .text{color:#fff; font-weight:bold; font-family:'Cinzel', serif; font-size:11px;}
+.developer-badge .code-icon{color:var(--diamond1); font-weight:900; font-family:monospace; font-size:14px; animation:blink 2s infinite;}
+.nav-container {
+  position: sticky;
+  top:0;
+  z-index:1000;
+  background: rgba(2,6,23,0.85);
+  backdrop-filter: blur(15px);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid rgba(0,242,254,0.2);
+  box-shadow: 0 0 25px rgba(0,242,254,0.15);
+}
+.nav-container .logo{
+  font-weight:900; font-size:20px;
+  color: var(--diamond1);
+  text-shadow: 0 0 5px var(--diamond1),0 0 10px var(--diamond2);
+}
+.menu-item{
+  padding:8px 18px; border-radius:12px; font-weight:bold; text-decoration:none;
+  color: var(--diamond1);
+  position:relative; transition:0.3s;
+}
+.menu-item::before{
+  content:""; position:absolute; inset:0; border-radius:12px;
+  background: linear-gradient(45deg,var(--diamond1),var(--diamond2),var(--diamond1));
+  opacity:0; z-index:-1; transition:0.4s;
+}
+.menu-item:hover::before{opacity:1; filter:blur(8px);}
+.menu-item:hover{text-shadow:0 0 6px var(--diamond1),0 0 12px var(--diamond2);}
+
 </style>
 </head>
 <nav class="nav-container">
-        <div style="font-weight: 900; color: var(--primary);">SILANCE ❄️</div>
-        <div class="epic-menu">
-            <a href="./index.html" class="menu-item"> رجوع الى المملكة</a>
-        </div>
-    </nav>
+    <div>SILANCE ❄️</div>
+     <a href="index.html" class="menu-item">رجوع إلى المملكة</a>
+</nav>
 
 <body>
 <div class="snow-container"></div>
@@ -482,9 +660,9 @@ body{
 
     <!-- TITLE SECTION -->
 <div class="title-box">
-    <h1>👑 الكونت 👑</h1>
+    <h1 style="color:var(--diamond1)">👑 الكونت 👑</h1>
     <div class="line"></div>
-    <p>   تعرف على حاكم اقليم  ايثيريا</p>
+    <p style="color:var(--diamond1)">   تعرف على حاكم اقليم  ايثيريا</p>
 </div>
 
 <div class="container">
@@ -496,8 +674,8 @@ body{
             <div class="avatar">
                 <img src="./danti.jfif">
             </div>
-            <div class="name">🎵 دانتي </div>
-            <div class="icons">كونت </div>
+            <div class="name" style="color:var(--diamond1)">🎵 دانتي </div>
+            <div class="icons" style="color:var(--diamond1)">كونت </div>
         </div>
     </div>
 
@@ -508,11 +686,11 @@ body{
             <div class="avatar">
                 <img src="./gabimaro.jfif">
             </div>
-            <div class="name">🎼 غابيمارو</div>
-            <div class="icons">نائبه</div>
+            <div class="name" style="color:var(--diamond1)">🎼 غابيمارو</div>
+            <div class="icons" style="color:var(--diamond1)">نائبه</div>
         </div>
     </div>
-    <h1 class="i9lim-title" style="color: white; text-align: center;">
+    <h1 class="i9lim-title" style="color:var(--diamond1); text-align: center;">
     نقابات 
   </h1>
     <!-- CARD 3 KING -->
@@ -522,8 +700,8 @@ body{
             <div class="avatar">
                 <img src="./kaniki.jfif">
             </div>
-            <div class="name">🌒 كانيكي </div>
-            <div class="icons">هيروكو 🪶</div>
+            <div class="name" style="color:var(--diamond1)">🌒 كانيكي </div>
+            <div class="icons" style="color:var(--diamond1)">هيروكو 🪶</div>
         </div>
     </div>
 
@@ -534,20 +712,20 @@ body{
             <div class="avatar">
                 <img src="./chado.jfif">
             </div>
-            <div class="name">🍷  شادو</div>
-            <div class="icons">فونتين ⚖️</div>
+            <div class="name" style="color:var(--diamond1)">🍷  شادو</div>
+            <div class="icons" style="color:var(--diamond1)">فونتين ⚖️</div>
         </div>
     </div>
 
     <!-- CARD 5 -->
-    <div class="card" style="--bg:url('./kilwa.jfif')">
+    <div class="card" style="--bg:url('./kilwa.jfif') ;color:var(--diamond1)">
         <div class="overlay"></div>
         <div class="content">
-            <div class="avatar">
+            <div class="avatar" >
                 <img src="./kilwa.jfif">
             </div>
-            <div class="name"> كيــ⚡ــلوا </div>
-            <div class="icons">طوكيو 🌙</div>
+            <div class="name" style="color:var(--diamond1)"> كيــ⚡ــلوا </div>
+            <div class="icons" style="color:var(--diamond1)">طوكيو 🌙</div>
         </div>
     </div>
     <div class="card" style="--bg:url('./jan.jfif')">
@@ -556,8 +734,8 @@ body{
             <div class="avatar">
                 <img src="./jan.jfif">
             </div>
-            <div class="name">  جـان 🌸 </div>
-            <div class="icons"> اثينا 🍃</div>
+            <div class="name" style="color:var(--diamond1)">  جـان 🌸 </div>
+            <div class="icons" style="color:var(--diamond1)"> اثينا 🍃</div>
         </div>
     </div>
 
