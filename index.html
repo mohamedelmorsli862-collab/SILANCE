@@ -412,40 +412,21 @@ footer{
 }
 /* ===== DO9 FIX FINAL ===== */
 
-/* ===== DO9 ROYAL SECTION ===== */
-
 .section-do9{
   padding:100px 5%;
   display:flex;
-  gap:30px;
-  overflow-x:auto;          /* يسمح بالجر */
-  overflow-y:hidden;
-  flex-wrap:nowrap;         /* مهم جدا باش ما يهبطوش */
-  scroll-snap-type:x mandatory;
-  scroll-behavior:smooth;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
 }
-
-/* نخبي scrollbar */
-.section-do9::-webkit-scrollbar{
-  display:none;
-}
-
-.section-do9{
-  -ms-overflow-style:none;
-  scrollbar-width:none;
-}
-
-/* ===== CARD ===== */
 
 .do9-card{
-  min-width:260px;          /* ما تتصغّرش */
+  width:260px;
   height:360px;
   border-radius:25px;
   overflow:hidden;
   position:relative;
-  flex-shrink:0;            /* مهم جدا */
-  scroll-snap-align:center;
-  transition:.4s ease;
+  transition:.4s;
 }
 
 .do9-card a{
@@ -464,7 +445,6 @@ footer{
   display:block;
 }
 
-/* Overlay */
 .do9-overlay{
   position:absolute;
   bottom:0;
@@ -479,27 +459,39 @@ footer{
   font-size:18px;
 }
 
-/* Hover Effect */
+.do9-card:hover{
+  transform:scale(1.07);
+}
+/* ===== DO9 ROYAL SLIDER ===== */
+
+.section-do9{
+  padding:100px 5%;
+  display:flex;
+  gap:30px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+}
+
+.section-do9::-webkit-scrollbar{
+  display:none;
+}
+
+.do9-card{
+  min-width:260px;
+  height:360px;
+  border-radius:25px;
+  overflow:hidden;
+  position:relative;
+  flex-shrink:0;
+  scroll-snap-align:center;
+  transition:.4s;
+}
+
 .do9-card:hover{
   transform:scale(1.08);
   box-shadow:0 0 30px #00f2fe,
              0 0 60px #8e2de2;
-}
-
-/* ===== TELEPHONE FIX ===== */
-
-@media (max-width:768px){
-
-  .section-do9{
-    padding:60px 5%;
-    gap:20px;
-  }
-
-  .do9-card{
-    min-width:220px;  /* باش يبقاو صغار شوية ويتجمعو */
-    height:320px;
-  }
-
 }
 /* ===== I9ALIM ANIMATION ===== */
 
@@ -1030,7 +1022,6 @@ footer{
     0 0 20px #8e2de2,
     0 0 40px #00f2fe;
 }
-
     </style>
     <nav class="nav-container">
     <div class="logo">SILANCE ❄️</div>
